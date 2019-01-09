@@ -38,9 +38,8 @@
   padding: 0 0 10px 0;
   border-bottom: 1px solid black;
 }
-.button p {
-}
 .button{
+  cursor: pointer;
   font-size: 14px;
   height: 25px;
   width: 55px;
@@ -52,4 +51,9 @@
   justify-content: center;
   align-items: center;
   opacity: .75;
+}
+.selectedButton{
+  color: white;
+  background-image: none;
+  background-color: black;
 }
