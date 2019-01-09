@@ -1,12 +1,21 @@
 import React from 'react';
 
 //taken from icons8.com
-const arrowSVG = (<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="50" height="50" viewBox="0 0 224 224" style={{fillColor:"#000000"}}><g fill="none" fillRule="nonzero"
-stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0"
-fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{mixBlendMode: "normal"}}><path d="M0,224v-224h224v224z" fill="#dddddd"></path>
-<g fill="#ffffff"><path d="M31.22875,8.8375c-4.94502,0.07247 -8.89639,4.13741 -8.82875,9.0825v49.28h49.28c3.2313,0.0457 6.23689,-1.652 7.86587,-4.44302c1.62898,-2.79102 1.62898,-6.24294 0,-9.03396c-1.62898,-2.79102 -4.63458,-4.48872 -7.86587,-4.44302h-17.185c15.1364,-13.89584 35.27762,-22.4 57.505,-22.4c47.11672,0 85.12,38.00328 85.12,85.12c0,47.11672 -38.00328,85.12 -85.12,85.12c-47.11672,0 -85.12,-38.00328 -85.12,-85.12c0.0457,-3.2313 -1.652,-6.23689 -4.44302,-7.86587c-2.79102,-1.62898 -6.24294,-1.62898 -9.03396,0c-2.79102,1.62898 -4.48872,4.63458 -4.44302,7.86587c0,56.80136 46.23864,103.04 103.04,103.04c56.80136,0 103.04,-46.23864 103.04,-103.04c0,-56.80136 -46.23864,-103.04 -103.04,-103.04c-27.81428,0 -53.12362,11.06601 -71.68,29.0325v-20.0725c0.03311,-2.42035 -0.91437,-4.75114 -2.6268,-6.46192c-1.71243,-1.71078 -4.04413,-2.65601 -6.46445,-2.62058z">
-</path></g></g></svg>);
+const arrowSVG = (<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+     width="20px" height="20px" viewBox="0 0 528.919 528.918" style={{backgroundColor: "#282828"}} transform="rotate(90)"
+	 >
+<g>
+	<g>
+		<path style={{fill:"white"}} d="M70.846,324.059c3.21,3.926,8.409,3.926,11.619,0l69.162-84.621c3.21-3.926,1.698-7.108-3.372-7.108h-36.723
+			c-5.07,0-8.516-4.061-7.427-9.012c18.883-85.995,95.625-150.564,187.207-150.564c105.708,0,191.706,85.999,191.706,191.706
+			c0,105.709-85.998,191.707-191.706,191.707c-12.674,0-22.95,10.275-22.95,22.949s10.276,22.949,22.95,22.949
+			c131.018,0,237.606-106.588,237.606-237.605c0-131.017-106.589-237.605-237.606-237.605
+			c-116.961,0-214.395,84.967-233.961,196.409c-0.878,4.994-5.52,9.067-10.59,9.067H5.057c-5.071,0-6.579,3.182-3.373,7.108
+			L70.846,324.059z"/>
+	</g>
+</g>
+</svg>
+		);
 
 class Slider extends React.Component {
   constructor(props) {
@@ -78,7 +87,7 @@ class Slider extends React.Component {
 
   }
   renderRows() {
-    let arr = [this.sliderRow("Color Temp", 3200, "K"), this.sliderRow("Color Temp", 3200, "K"),
+    let arr = [this.sliderRow("Color Temp", 3200, "K"), this.sliderRow("Red", 100),
       this.sliderRow("Green", 100), this.sliderRow("Blue", 100)];
     return (
       arr
