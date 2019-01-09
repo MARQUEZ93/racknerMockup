@@ -1,8 +1,8 @@
 import React from 'react';
 
 //taken from icons8.com
-const arrowSVG = (<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-     width="20px" height="20px" viewBox="0 0 528.919 528.918" style={{backgroundColor: "#282828"}} transform="rotate(90)"
+const arrowSVG = (<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+     className="arrowSVG" width="20px" height="15px" viewBox="0 0 528.919 528.918" style={{backgroundColor: "#282828"}} transform="rotate(90)"
 	 >
 <g>
 	<g>
@@ -48,7 +48,7 @@ class Slider extends React.Component {
   }
   renderButtons(type1, type2, type3, className) {
     return (
-      <div className="threeButtons">
+      <div className="threeFanButtons">
         {this.button(type1, className)}
         {this.button(type2, className)}
         {this.button(type3, className)}
@@ -75,9 +75,11 @@ class Slider extends React.Component {
     return (
       <div className="sliderRow">
         <div className="topSliderRow">
-          {arrowSVG}
-          <p>{name}</p>
-          <p>{max}</p>
+          <div className="arrowName">
+            {arrowSVG}
+            <p className="arrowNameParagraphOne">{name}</p>
+          </div>
+          <p className="arrowNameParagraphTwo">{max}{units}</p>
         </div>
         <div className="bottomSliderRow">
           <input type="range" min="1" max="100" value="50" className="slider" id="myRange" />
@@ -96,7 +98,7 @@ class Slider extends React.Component {
 
   render() {
     return (
-      <div className="slider">
+      <div className="sliderComponent">
         {this.renderRows()}
         {this.renderFan()}
       </div>
