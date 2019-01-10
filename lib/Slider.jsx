@@ -22,8 +22,10 @@ class Slider extends React.Component {
     super(props);
     this.state = {"Green": "100", "Red": "100", "Blue": "100", "Color Temp": "3200"};
     this.handleChange = this.handleChange.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
   componentDidMount(){
+    let componentThis = this;
     $( document ).ready(function() {
       $( ".fanButton" ).each(function( index ) {
         if (this.children[0].textContent === "Off"){
@@ -34,6 +36,7 @@ class Slider extends React.Component {
     });
     $(".fanButton").click(function(){
       if (!$(this).hasClass('selectedFanButton')){
+        //find current selected button, and remove class
         $( ".fanButton" ).each(function( index ) {
           if ($(this).hasClass("selectedFanButton")){
             $(this).removeClass('selectedFanButton');
@@ -41,6 +44,13 @@ class Slider extends React.Component {
           }
         });
         $(this).addClass('selectedFanButton');
+        if (this.children[0].textContent === "Off"){
+          componentThis.setState({"Green": "100", "Red": "100", "Blue": "100", "Color Temp": "3200"});
+        } else if (this.children[0].textContent === "Full"){
+          componentThis.setState({"Green": "100", "Red": "100", "Blue": "100", "Color Temp": "4700"});
+        } else if (this.children[0].textContent === "Auto"){
+          componentThis.setState({"Green": "50", "Red": "50", "Blue": "50", "Color Temp": "3700"});
+        }
       }
     });
   }
@@ -76,7 +86,6 @@ class Slider extends React.Component {
   handleChange(name) {
     return event => {
       this.setState({[name]: event.target.value});
-      console.log(this.state);
     }
   }
   sliderRow(name, units=null, min="0", max="100"){
