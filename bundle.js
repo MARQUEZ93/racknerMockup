@@ -210,15 +210,16 @@ var Gel =
 function (_React$Component) {
   _inherits(Gel, _React$Component);
 
-  function Gel(props) {
+  function Gel() {
     _classCallCheck(this, Gel);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Gel).call(this, props));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Gel).apply(this, arguments));
   }
 
   _createClass(Gel, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      //jquery to listen in on click events
       $(document).ready(function () {
         $(".topButton").each(function (index) {
           if (this.children[0].textContent === "Hue") {
@@ -378,35 +379,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
- //taken from icons8.com
-
-var arrowSVG = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-  version: "1.1",
-  xmlns: "http://www.w3.org/2000/svg",
-  x: "0px",
-  y: "0px",
-  className: "arrowSVG",
-  width: "20px",
-  height: "15px",
-  viewBox: "0 0 528.919 528.918",
-  style: {
-    backgroundColor: "#282828"
-  },
-  transform: "rotate(90)"
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-  style: {
-    fill: "white"
-  },
-  d: "M70.846,324.059c3.21,3.926,8.409,3.926,11.619,0l69.162-84.621c3.21-3.926,1.698-7.108-3.372-7.108h-36.723 c-5.07,0-8.516-4.061-7.427-9.012c18.883-85.995,95.625-150.564,187.207-150.564c105.708,0,191.706,85.999,191.706,191.706 c0,105.709-85.998,191.707-191.706,191.707c-12.674,0-22.95,10.275-22.95,22.949s10.276,22.949,22.95,22.949 c131.018,0,237.606-106.588,237.606-237.605c0-131.017-106.589-237.605-237.606-237.605 c-116.961,0-214.395,84.967-233.961,196.409c-0.878,4.994-5.52,9.067-10.59,9.067H5.057c-5.071,0-6.579,3.182-3.373,7.108 L70.846,324.059z"
-}))));
 
 var Slider =
 /*#__PURE__*/
@@ -424,9 +405,27 @@ function (_React$Component) {
       "Red": "100",
       "Blue": "100",
       "Color Temp": "3200"
-    };
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
-    _this.componentDidMount = _this.componentDidMount.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    }; //taken from icons8.com
+
+    _this.arrowSVG = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+      version: "1.1",
+      xmlns: "http://www.w3.org/2000/svg",
+      x: "0px",
+      y: "0px",
+      className: "arrowSVG",
+      width: "20px",
+      height: "15px",
+      viewBox: "0 0 528.919 528.918",
+      style: {
+        backgroundColor: "#282828"
+      },
+      transform: "rotate(90)"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+      style: {
+        fill: "white"
+      },
+      d: "M70.846,324.059c3.21,3.926,8.409,3.926,11.619,0l69.162-84.621c3.21-3.926,1.698-7.108-3.372-7.108h-36.723 c-5.07,0-8.516-4.061-7.427-9.012c18.883-85.995,95.625-150.564,187.207-150.564c105.708,0,191.706,85.999,191.706,191.706 c0,105.709-85.998,191.707-191.706,191.707c-12.674,0-22.95,10.275-22.95,22.949s10.276,22.949,22.95,22.949 c131.018,0,237.606-106.588,237.606-237.605c0-131.017-106.589-237.605-237.606-237.605 c-116.961,0-214.395,84.967-233.961,196.409c-0.878,4.994-5.52,9.067-10.59,9.067H5.057c-5.071,0-6.579,3.182-3.373,7.108 L70.846,324.059z"
+    }), " "), " "));
     return _this;
   }
 
@@ -529,18 +528,13 @@ function (_React$Component) {
         className: "topSliderRow"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "arrowName"
-      }, arrowSVG, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, this.arrowSVG, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "arrowNameParagraphOne"
       }, name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "arrowNameParagraphTwo"
       }, this.state[name], units)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bottomSliderRow"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        dataSliderMin: "0.0",
-        dataSliderMax: "100",
-        dataSliderTicks: "[0, 10, 20, 30, 40]",
-        dataSliderTicksSnapBounds: "30",
-        dataSliderRange: "false",
         onChange: this.handleChange(name),
         type: "range",
         min: min,
@@ -554,8 +548,7 @@ function (_React$Component) {
   }, {
     key: "renderRows",
     value: function renderRows() {
-      var arr = [this.sliderRow("Color Temp", "K", "2700", "4700", "200"), this.sliderRow("Red"), this.sliderRow("Green"), this.sliderRow("Blue")];
-      return arr;
+      return [this.sliderRow("Color Temp", "K", "2700", "4700", "200"), this.sliderRow("Red"), this.sliderRow("Green"), this.sliderRow("Blue")];
     }
   }, {
     key: "render",
