@@ -83,7 +83,7 @@ class Slider extends React.Component {
   }
   sliderRow(name, units=null, min="0", max="100", step="10"){
     return (
-      <div className="sliderRow">
+      <div className="sliderRow" key={name}>
         <div className="topSliderRow">
           <div className="arrowName">
             {this.arrowSVG}

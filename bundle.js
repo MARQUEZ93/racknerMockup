@@ -523,7 +523,8 @@ function (_React$Component) {
       var max = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "100";
       var step = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "10";
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sliderRow"
+        className: "sliderRow",
+        key: name
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "topSliderRow"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
