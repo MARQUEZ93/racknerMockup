@@ -20,6 +20,8 @@ const arrowSVG = (<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" 
 class Slider extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {"Green": "100", "Red": "100", "Blue": "100", "Color Temp": "3200"};
+    this.handleChange = this.handleChange.bind(this);
   }
   componentDidMount(){
     $( document ).ready(function() {
@@ -71,7 +73,13 @@ class Slider extends React.Component {
       </div>
     );
   }
-  sliderRow(name, max, units=null){
+  handleChange(name) {
+    return event => {
+      this.setState({[name]: event.target.value});
+      console.log(this.state);
+    }
+  }
+  sliderRow(name, units=null, min="0", max="100"){
     return (
       <div className="sliderRow">
         <div className="topSliderRow">
@@ -79,18 +87,18 @@ class Slider extends React.Component {
             {arrowSVG}
             <p className="arrowNameParagraphOne">{name}</p>
           </div>
-          <p className="arrowNameParagraphTwo">{max}{units}</p>
+          <p className="arrowNameParagraphTwo">{this.state[name]}{units}</p>
         </div>
         <div className="bottomSliderRow">
-          <input type="range" min="1" max="100" value="50" className="slider" id="myRange" />
+          <input onChange={this.handleChange(name)} type="range" min={min} max={max} value={this.state[name]} className="slider" id="myRange" />
         </div>
       </div>
     );
 
   }
   renderRows() {
-    let arr = [this.sliderRow("Color Temp", 3200, "K"), this.sliderRow("Red", 100),
-      this.sliderRow("Green", 100), this.sliderRow("Blue", 100)];
+    let arr = [this.sliderRow("Color Temp", "K", "2700", "4700"), this.sliderRow("Red"),
+      this.sliderRow("Green"), this.sliderRow("Blue")];
     return (
       arr
     );

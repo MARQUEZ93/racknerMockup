@@ -39,7 +39,7 @@
 }
 .topButton, .fanButton {
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
   height: 25px;
   width: 55px;
   color: grey;
@@ -54,7 +54,7 @@
 .selectedTopButton, .selectedFanButton{
   color: white;
   background-image: none;
-  background-color: black;
+  background-image: linear-gradient(to top, black, #181818);
 }
 .fanHeader {
   margin-left: 20px;
