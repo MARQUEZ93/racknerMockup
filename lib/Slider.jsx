@@ -88,7 +88,7 @@ class Slider extends React.Component {
       this.setState({[name]: event.target.value});
     }
   }
-  sliderRow(name, units=null, min="0", max="100"){
+  sliderRow(name, units=null, min="0", max="100", step="10"){
     return (
       <div className="sliderRow">
         <div className="topSliderRow">
@@ -99,14 +99,19 @@ class Slider extends React.Component {
           <p className="arrowNameParagraphTwo">{this.state[name]}{units}</p>
         </div>
         <div className="bottomSliderRow">
-          <input onChange={this.handleChange(name)} type="range" min={min} max={max} value={this.state[name]} className="slider" id="myRange" />
+          <input dataSliderMin="0.0"
+    dataSliderMax="100"
+    dataSliderTicks="[0, 10, 20, 30, 40]"
+    dataSliderTicksSnapBounds="30"
+    dataSliderRange="false"
+            onChange={this.handleChange(name)} type="range" min={min} max={max} step={step} value={this.state[name]} className="slider" id="myRange" />
         </div>
       </div>
     );
 
   }
   renderRows() {
-    let arr = [this.sliderRow("Color Temp", "K", "2700", "4700"), this.sliderRow("Red"),
+    let arr = [this.sliderRow("Color Temp", "K", "2700", "4700", "200"), this.sliderRow("Red"),
       this.sliderRow("Green"), this.sliderRow("Blue")];
     return (
       arr
