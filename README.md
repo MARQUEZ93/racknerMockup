@@ -5,7 +5,7 @@
 ## Instructions
 <div display="flex" justify-content="center">
 <p><img src="https://i.imgur.com/aHPqSvI.png" height="425px" width="212px" /></p>
-<på><img src="https://i.imgur.com/gtCBIUW.png" height="425px" width="212px" /></p>
+<p><img src="https://i.imgur.com/gtCBIUW.png" height="425px" width="212px" /></p>
 </div>
 
 * Mockup the attached design using HTML and CSS (and optionally react).
