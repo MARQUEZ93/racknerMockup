@@ -2,7 +2,7 @@
 
 ## Instructions
 
-<p align="center"><img src="https://i.imgur.com/aHPqSvI.png" height="400px" width="400px" /></p>
+<p align="center"><img src="https://i.imgur.com/aHPqSvI.png" height="600px" width="300px" /></p>
 
 * Mockup the attached design using HTML and CSS (and optionally react).
 * You can use React if you want, but it's not a requirement.
