@@ -3,7 +3,7 @@
 [Live Mockup](https://marquez93.github.io/racknerMockup/)
 
 ## Instructions
-<div display="flex" flex-direction="row" justify-content="center">
+<div display="flex" justify-content="center">
 <p><img src="https://i.imgur.com/aHPqSvI.png" height="425px" width="212px" /></p>
 <på><img src="https://i.imgur.com/gtCBIUW.png" height="425px" width="212px" /></p>
 </div>
