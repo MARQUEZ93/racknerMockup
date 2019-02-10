@@ -1,10 +1,12 @@
 # [racknerMockup](https://marquez93.github.io/racknerMockup/)
 
-* [Live Mockup](https://marquez93.github.io/racknerMockup/)
+[Live Mockup](https://marquez93.github.io/racknerMockup/)
 
 ## Instructions
-
-<p align="center"><img src="https://i.imgur.com/aHPqSvI.png" height="450px" width="225px" /></p>
+<div display="flex" justify-content="center">
+<p align="center"><img src="https://i.imgur.com/aHPqSvI.png" height="425px" width="212px" /></p>
+<p align="center"><img src="https://i.imgur.com/gtCBIUW.png" height="425px" width="212px" /></p>
+</div>
 
 * Mockup the attached design using HTML and CSS (and optionally react).
 * You can use React if you want, but it's not a requirement.
